@@ -1,0 +1,9 @@
+# change the window split command
+bind | split-window -h
+bind - split-window -v
+
+# Resizing the panes with vim-like movement commands
+bind H resize-pane -L 5
+bind J resize-pane -D 5
+bind K resize-pane -U 5
+bind L resize-pane -R 5

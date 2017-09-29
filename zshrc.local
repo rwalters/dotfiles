@@ -1,0 +1,10 @@
+source '/usr/local/share/chruby/chruby.sh'
+source '/usr/local/share/chruby/auto.sh'
+export ENV_FILE=.env.dev
+export PORT=5000
+export RACK_ENV=development
+export DATABASE_URL=postgres://postgres@localhost/pg-fresh-development-1?sslmode=disable
+export DATABASE_URL_2=postgres://postgres@localhost/pg-fresh-development-2?sslmode=disable
+export REDIS_LRU_URL=redis://localhost
+export REDIS_STATS_URL=redis://localhost
+export ELASTICSEARCH_URL=http://localhost:9200

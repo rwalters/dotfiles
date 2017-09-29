@@ -1,0 +1,42 @@
+# Git
+alias gpo='git push origin'
+
+# Testing
+alias rspec='clear;time bin/runtest m'
+
+# Unix
+alias vim="/usr/local/bin/vim"
+alias ack='ag'
+alias cdfresh="cd ~/code/pg-fresh"
+alias cdclient="cd ~/code/pg-fresh-client"
+alias cdtools="cd ~/code/pg-tools"
+
+# Docker
+alias dc='docker-compose'
+alias dcupd='dc up -d'
+
+alias dclscon='docker container ls'
+alias dclsconorphan='dclscon -f status=exited'
+alias dccleancon='docker container rm $(dclsconorphan -q)'
+
+alias dclsimg='docker image ls'
+alias dclsimgorphan='dclsimg -f dangling=true'
+alias dccleanimg='docker image rm $(dclsimgorphan -q)'
+
+alias dclsvol='docker volume ls'
+alias dclsvolorphan='dclsvol -f dangling=true'
+alias dccleanvol='docker volume rm $(dclsvolorphan -q)'
+
+alias dccleanall='dccleancon;dccleanimg;dccleanvol'
+
+## Tools specific commands
+alias toolsreset='dc down && scripts/build_image && dcupd && dc logs -f client'
+
+## Fresh specific commands
+alias dcreset='dc down && dc build && bin/runbg-up'
+alias dctests='clear;time bin/runtest rake'
+
+alias dcmigratedev='bin/rundev echo ""'
+alias dcmigratetest='bin/runtest echo ""'
+alias dcmigrate='clear;dcmigratedev && dcmigratetest'
+alias dcmigratedown='clear;bin/rundev rake db:migrate[20170905150106] && bin/runtest rake db:migrate[20170905150106]'

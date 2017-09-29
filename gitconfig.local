@@ -1,0 +1,5 @@
+[alias]
+  aa = add --all --intent-to-add
+  unstage = reset HEAD
+  cm      = commit -m
+  rmbranch= delete-branch

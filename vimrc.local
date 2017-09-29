@@ -1,0 +1,8 @@
+nnoremap \ :NERDTreeToggle<CR>
+nnoremap <C-\> :NERDTreeFind<CR>
+
+nnoremap <Leader>f :CtrlP<CR>
+
+" vim-test mappings
+let test#ruby#bundle_exec = 0
+
