@@ -8,3 +8,5 @@ export DATABASE_URL_2=postgres://postgres@localhost/pg-fresh-development-2?sslmo
 export REDIS_LRU_URL=redis://localhost
 export REDIS_STATS_URL=redis://localhost
 export ELASTICSEARCH_URL=http://localhost:9200
+export PATH=/usr/local/opt/icu4c/bin:$PATH
+export PATH=/usr/local/opt/icu4c/sbin:$PATH
