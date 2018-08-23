@@ -4,3 +4,4 @@
   cm      = commit -m
   rmbranch= delete-branch
   mnf     = merge --no-ff
+  ls      = branch
