@@ -1,0 +1,14 @@
+## Tools specific commands
+alias toolsrebuild='clear;dc down && scripts/build_image && dcupd'
+alias toolsreset='cat .env > .env.heroku && toolsrebuild && dc logs -f client'
+
+## Fresh specific commands
+alias dctests='clear;time bin/runtest rake'
+
+alias dcdbreset='dc down && docker volume rm pg-fresh_postgres && bin/docker-setup'
+
+alias dcmigratedev='bin/rundev echo ""'
+alias dcmigratetest='bin/runtest echo ""'
+alias dcmigrate='clear;dcmigratedev && dcmigratetest'
+alias dcmigratedown='clear;bin/rundev rake db:migrate[20180227164834] && bin/runtest rake db:migrate[20180227164834]'
+alias dcmigrationcheck='bin/rundev rake db:check_migrations[10] && bin/runtest rake db:check_migrations[10]'
