@@ -1,3 +1,6 @@
+[user]
+  ame = Ray Walters
+  email = ray.walters@gmail.com
 [alias]
   aa = add --all --intent-to-add
   unstage = reset HEAD
