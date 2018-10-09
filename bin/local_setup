@@ -28,6 +28,7 @@ brew cleanup
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 echo "Utilities"
+brew cask install sizeup
 brew cask install iterm2
 brew cask install slack
 brew cask install vlc
