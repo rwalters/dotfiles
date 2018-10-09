@@ -2,6 +2,53 @@
 #
 # install a few necessary items when first setting up a machine
 
+if test ! $(which brew); then
+  echo "Installing homebrew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+echo "Updating homebrew"
+brew update
+
+echo "Setup dotfiles"
+brew tap thoughtbot/formulae
+brew install rcm
+
+echo "Install cmd line tools"
 brew install chruby
 brew install tmux
 brew install vim
+brew install mas
+
+echo "Setup Cask"
+brew tap caskroom/versions
+
+brew cleanup
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+echo "Utilities"
+brew cask install iterm2
+brew cask install slack
+brew cask install vlc
+
+echo "Cloud Drives"
+brew cask install dropbox
+brew cask install box-drive
+
+echo "Organizational Tools"
+brew cask install evernote
+mas lucky anydo
+brew cask install alfred
+
+echo "Browsers"
+brew cask install google-chrome
+brew cask install iridium
+
+echo "Cleanup"
+brew cleanup
+
+brew cask alfred link
+
+echo "RCUP"
+env RCRC=$HOME/dotfiles/rcrc rcup
