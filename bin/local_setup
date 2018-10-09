@@ -15,10 +15,13 @@ brew tap thoughtbot/formulae
 brew install rcm
 
 echo "Install cmd line tools"
+brew install ruby-install
 brew install chruby
 brew install tmux
 brew install vim
+brew install ag
 brew install mas
+brew install heroku
 
 brew cleanup
 
@@ -40,7 +43,7 @@ brew cask install box-drive
 
 echo "Organizational Tools"
 brew cask install evernote
-mas lucky anydo
+mas install 944960179 # AnyDo
 brew cask install alfred
 
 echo "Browsers"
