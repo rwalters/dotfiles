@@ -52,4 +52,5 @@ brew cleanup
 brew cask alfred link
 
 echo "RCUP"
+chsh -s $(which zsh)
 env RCRC=$HOME/dotfiles/rcrc rcup
