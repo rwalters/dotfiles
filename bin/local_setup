@@ -22,6 +22,7 @@ brew install vim
 brew install ag
 brew install mas
 brew install heroku
+brew install ghi
 
 brew cleanup
 
