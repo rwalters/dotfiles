@@ -28,3 +28,7 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+[github]
+	user = rwalters
+[ghi]
+	token = !security find-internet-password -a rwalters -s github.com -l 'ghi token' -w

@@ -1,4 +1,7 @@
 source '/usr/local/share/chruby/chruby.sh'
 source '/usr/local/share/chruby/auto.sh'
+
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH=/usr/local/opt/icu4c/bin:$PATH
 export PATH=/usr/local/opt/icu4c/sbin:$PATH
+export FEDORA_SECRET_KEY=wm6qRi_DF3oT7wdJ0eDNWQ
