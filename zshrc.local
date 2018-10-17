@@ -5,3 +5,4 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH=/usr/local/opt/icu4c/bin:$PATH
 export PATH=/usr/local/opt/icu4c/sbin:$PATH
 export FEDORA_SECRET_KEY=wm6qRi_DF3oT7wdJ0eDNWQ
+export NPM_TOKEN=57628b58-9276-4660-bd1b-f8dbd3c50983

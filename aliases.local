@@ -1,17 +1,21 @@
 # Git
 alias gpo='git push origin'
 
-# Testing
-alias rspec='clear;time bin/runtest m'
-
 # Unix
 alias vim="/usr/local/bin/vim"
 alias ack='ag'
+
+# Rails
+alias bexec="bundle exec"
+alias migrate="bexec rake db:migrate db:rollback && bexec rake db:migrate db:test:prepare"
 
 # Docker
 alias dc='docker-compose'
 alias dcupd='dc up -d'
 alias dcreset='dc down && dcupd'
+
+alias dcrun='dc run --user app --rm fedora'
+alias dcexec='dc exec --user app fedora'
 
 alias dclscon='docker container ls'
 alias dclsconorphan='dclscon -f status=exited'

@@ -37,6 +37,7 @@ brew cask install sizeup
 brew cask install iterm2
 brew cask install slack
 brew cask install vlc
+brew cask install docker
 
 echo "Cloud Drives"
 brew cask install dropbox

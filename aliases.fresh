@@ -1,3 +1,6 @@
+# Testing
+alias rspec='clear;time bin/runtest m'
+
 ## Tools specific commands
 alias toolsrebuild='clear;dc down && scripts/build_image && dcupd'
 alias toolsreset='cat .env > .env.heroku && toolsrebuild && dc logs -f client'
