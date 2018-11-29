@@ -23,6 +23,7 @@ brew install ag
 brew install mas
 brew install heroku
 brew install ghi
+brew install exercism
 
 brew cleanup
 
