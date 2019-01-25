@@ -7,7 +7,7 @@ alias ack='ag'
 
 # Rails
 alias bexec="bundle exec"
-alias migrate="bexec rake db:migrate db:rollback && bexec rake db:migrate db:test:prepare"
+alias migrate="bexec rake db:migrate db:migrate:redo && bexec rake db:migrate db:test:prepare"
 
 # Rspec
 alias rspec_branch='bexec rspec $(git diff master --name-only |grep '\''spec'\'')' 

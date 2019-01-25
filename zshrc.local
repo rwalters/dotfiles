@@ -7,3 +7,6 @@ export PATH=/usr/local/opt/icu4c/sbin:$PATH
 export FEDORA_SECRET_KEY=wm6qRi_DF3oT7wdJ0eDNWQ
 export NPM_TOKEN=57628b58-9276-4660-bd1b-f8dbd3c50983
 export DATABASE_USERNAME=postgres
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/rwalters/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
