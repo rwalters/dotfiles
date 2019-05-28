@@ -50,8 +50,12 @@ mas install 944960179 # AnyDo
 brew cask install alfred
 
 echo "Browsers"
-brew cask install google-chrome
-brew cask install iridium
+if [ ! -e "/Applications/Google Chrome.app" ]; then
+  brew cask install google-chrome
+fi
+if [ ! -e "/Applications/Firefox.app" ]; then
+  brew cask install firefox
+fi
 
 echo "Monospaced fonts"
 brew cask install font-anonymous-pro
