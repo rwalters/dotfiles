@@ -10,14 +10,15 @@ alias bexec="bundle exec"
 alias migrate="bexec rake db:migrate db:migrate:redo && bexec rake db:migrate db:test:prepare"
 
 # Rspec
-alias rspec_branch='bexec rspec $(git diff master --name-only |grep '\''spec'\'')' 
+alias rspec_branch='dcrun bundle exec rspec $(git diff master --name-only |grep '\''spec'\'')' 
+
 # Docker
 alias dc='docker-compose'
 alias dcupd='dc up -d'
 alias dcreset='dc down && dcupd'
 
-alias dcrun='dc run --user app --rm fedora'
-alias dcexec='dc exec --user app fedora'
+alias dcrun='dc run --rm server'
+alias dcexec='dc exec server'
 
 alias dclscon='docker container ls'
 alias dclsconorphan='dclscon -f status=exited'
