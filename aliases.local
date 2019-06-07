@@ -17,6 +17,7 @@ alias dc='docker-compose'
 alias dcupd='dc up -d'
 alias dcreset='dc down -v && dcupd'
 alias dcr='dc restart server'
+alias dclogs='dc logs -f server'
 
 alias dcrun='dc run --rm server'
 alias dcexec='dc exec server'
