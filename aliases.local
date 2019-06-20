@@ -41,4 +41,4 @@ alias dccleanall='dccleancon;dccleanimg;dccleanvol'
 alias dclint='dcexec make lint:auto-correct:local'
 alias dclint_types='dcexec bash -c "make lint:auto-correct:local && make typescript:types:local"'
 
-alias dstats='docker stats --format='\''table {{.Name}} \t| {{.CPUPerc}} | {{.MemPerc}} \t| {{.NetIO}}'\'''
+alias dstats='docker stats --format='\''table {{.Name}}\t| {{.CPUPerc}}\t| {{.MemPerc}}\t| {{.NetIO}}'\'''
