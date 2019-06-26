@@ -23,6 +23,7 @@ alias dclogs='dc logs -f server'
 
 alias dcrun='dc run --rm server'
 alias dcexec='dc exec server'
+alias dcbe='dcexec bundle exec'
 
 alias dclscon='docker container ls'
 alias dclsconorphan='dclscon -f status=exited'
