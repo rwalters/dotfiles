@@ -12,7 +12,12 @@ alias bexec="bundle exec"
 alias migrate="bexec rake db:migrate db:migrate:redo && bexec rake db:migrate db:test:prepare"
 
 # Rspec
-alias rspec_branch='dcexec bundle exec rspec $(git diff master --name-only |grep '\''spec'\'')' 
+alias dcspec='dcbe rspec'
+alias rspec_branch='dcspec $(git diff master --name-only |grep '\''spec'\'')' 
+
+# Lint tasks
+alias dclint='dcexec make lint:auto-correct:local'
+alias dclint_types='dcexec bash -c "make lint:auto-correct:local && make typescript:types:local"'
 
 # Docker
 alias dc='docker-compose'
@@ -38,8 +43,5 @@ alias dclsvolorphan='dclsvol -f dangling=true'
 alias dccleanvol='docker volume rm $(dclsvolorphan -q)'
 
 alias dccleanall='dccleancon;dccleanimg;dccleanvol'
-
-alias dclint='dcexec make lint:auto-correct:local'
-alias dclint_types='dcexec bash -c "make lint:auto-correct:local && make typescript:types:local"'
 
 alias dstats='docker stats --format='\''table {{.Name}}\t| {{.CPUPerc}}\t| {{.MemPerc}}\t| {{.NetIO}}'\'''
