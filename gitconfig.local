@@ -1,5 +1,5 @@
 [user]
-  ame = Ray Walters
+  name = Ray Walters
   email = ray.walters@gmail.com
 [alias]
   aa = add --all --intent-to-add
@@ -8,3 +8,4 @@
   rmbranch= delete-branch
   mnf     = merge --no-ff
   ls      = branch
+  lsgrep  = branch -a --list
