@@ -10,3 +10,8 @@ imap <F1> <Esc>
 let test#ruby#bundle_exec = 0
 
 let test#ruby#rspec#executable = 'docker-compose exec server bundle exec rspec'
+
+" Fugitive Conflict Resolution
+nnoremap <leader>gd :Gvdiff<CR>
+nnoremap gdh :diffget //2<CR>
+nnoremap gdl :diffget //3<CR>
