@@ -16,10 +16,20 @@ nnoremap <leader>gd :Gvdiff<CR>
 nnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
 
-" " Use ripgrep over ag/grep
-" if executable('rg')
-"   set grepprg=rg\ --vimgrep
-" 
-"   " Use rg in fzf for listing files. Lightning fast and respects .gitignore
-"   let $FZF_DEFAULT_COMMAND = 'rg --fixed-strings --files-with-matches --vimgrep --hidden -g ""'
-" endif
+" Use ripgrep over ag/grep
+if executable('rg')
+  set grepprg=rg\ --vimgrep
+
+  " Use rg in fzf for listing files.
+  let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --vimgrep --hidden'
+
+  command! -bang -nargs=* Rg
+    \ call fzf#vim#grep(
+    \   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
+    \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+    \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+    \   <bang>0)
+
+  nnoremap <Leader>g :Rg<Cr>
+  nnoremap <Leader>G :Rg!<Cr>
+endif
