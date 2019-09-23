@@ -1,7 +1,7 @@
 nnoremap \ :NERDTreeToggle<CR>
 nnoremap <C-\> :NERDTreeFind<CR>
 
-nnoremap <Leader>f :CtrlP<CR>
+nnoremap <Leader>f :Files<Cr>
 
 map <F1> <Esc>
 imap <F1> <Esc>
@@ -15,3 +15,11 @@ let test#ruby#rspec#executable = 'docker-compose exec server bundle exec rspec'
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
+
+" " Use ripgrep over ag/grep
+" if executable('rg')
+"   set grepprg=rg\ --vimgrep
+" 
+"   " Use rg in fzf for listing files. Lightning fast and respects .gitignore
+"   let $FZF_DEFAULT_COMMAND = 'rg --fixed-strings --files-with-matches --vimgrep --hidden -g ""'
+" endif
