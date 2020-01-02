@@ -1,7 +1,7 @@
 # Git
 alias gpo='git push origin'
 alias gborphan='git fetch --prune && git branch -r | awk '\''{print $1}'\'' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin)'
-alias gprune='gborphan | awk '\''{print $1}'\'' | xargs git branch -D'
+alias gprune='gborphan | awk '\''{print $1}'\'' | xargs git rmbranch'
 
 # Unix
 alias vim="/usr/local/bin/vim"
@@ -10,6 +10,7 @@ alias ack='ag'
 # Rails
 alias bexec="bundle exec"
 alias migrate="bexec rake db:migrate db:migrate:redo && bexec rake db:migrate db:test:prepare"
+alias ruboauto="bexec rubocop --auto-correct"
 
 # Rspec
 alias dcspec='dcbe rspec'
@@ -22,8 +23,10 @@ alias dclint_types='dcexec bash -c "make lint:auto-correct:local && make typescr
 # Docker
 alias dc='docker-compose'
 alias dcupd='dc up -d'
-alias dcreset='dc rm -sf server && dcupd'
 alias dcr='dc restart server'
+
+alias dcstop='dc rm -sf server'
+alias dcreset='dcstop && dcupd && dcstop && dcupd'
 alias dclogs='dc logs -f server'
 
 alias dcrun='dc run --rm server'
