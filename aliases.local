@@ -1,7 +1,7 @@
 # Git
 alias gpo='git push origin'
 alias gborphan='git fetch --prune && git branch -r | awk '\''{print $1}'\'' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin)'
-alias gprune='gborphan | awk '\''{print $1}'\'' | xargs git rmbranch'
+alias gprune='gborphan | awk '\''{print $1}'\'' | xargs git -D'
 
 # Unix
 alias vim="/usr/local/bin/vim"
