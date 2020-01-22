@@ -48,3 +48,7 @@ alias dccleanvol='docker volume rm $(dclsvolorphan -q)'
 alias dccleanall='dccleancon;dccleanimg;dccleanvol'
 
 alias dstats='docker stats --format='\''table {{.Name}}\t| {{.CPUPerc}}\t| {{.MemPerc}}\t| {{.NetIO}}'\'''
+
+# Make tasks
+alias console_staging='AWS_PROFILE=tm-staging make console:staging'
+alias console_prod='AWS_PROFILE=tm-production make console:prod'
