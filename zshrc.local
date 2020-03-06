@@ -10,6 +10,3 @@ export DATABASE_USERNAME=postgres
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/rwalters/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-
-# Vault token
-export VAULT_API_TOKEN=d9cd25c72d8d1d7d10e9accea8a924bce56e4638
