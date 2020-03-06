@@ -13,8 +13,8 @@ alias migrate="bexec rake db:migrate db:migrate:redo && bexec rake db:migrate db
 alias ruboauto="bexec rubocop --auto-correct"
 
 # Rspec
-alias dcspec='dcbe rspec'
-alias rspec_branch='dcspec $(git diff --diff-filter=d master --name-only |grep '\''_spec'\'')' 
+alias dcspec='dcbe rspec --fail-fast'
+alias rspec_branch='dcspec --fail-fast $(git diff --diff-filter=d master --name-only |grep '\''_spec'\'')' 
 
 # Lint tasks
 alias dclint='dcexec make lint:auto-correct:local'
