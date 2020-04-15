@@ -49,10 +49,9 @@ alias dccleanall='dccleancon;dccleanimg;dccleanvol'
 
 alias dstats='docker stats --format='\''table {{.Name}}\t| {{.CPUPerc}}\t| {{.MemPerc}}\t| {{.NetIO}}'\'''
 
-# Make tasks
-alias console_staging='AWS_PROFILE=tm-staging make console:staging'
-alias console_prod='AWS_PROFILE=tm-production make console:prod'
-
 # Terraform tasks
 alias apply_staging='cd ~/code/infrastructure/staging/us-east-2/demo/instance;AWS_PROFILE=tm-staging AWS_DEFAULT_REGION=us-east-2 terraform apply'
 alias apply_production='cd ~/code/infrastructure/production/us-east-2/backend;AWS_PROFILE=tm-production AWS_DEFAULT_REGION=us-east-2 terraform apply'
+
+# Kube tasks
+alias list_pots='AWS_PROFILE=tm-staging kubectl get pods -n'

@@ -10,3 +10,12 @@ export DATABASE_USERNAME=postgres
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/rwalters/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+
+# Call for Kubernetes rails console
+function kube_console_staging() {
+  # $1 is the pod name (ie, 'web-keeps-1202-5c844647c-xh4gd')
+  # $2 is the demo env name (ie, 'keeps-1201')
+
+  AWS_PROFILE=tm-staging kubectl exec -it $1 -n $2  -c backend -- bash -c "infra/bin/staging/kubernetes/console"
+}
