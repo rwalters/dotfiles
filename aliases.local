@@ -54,4 +54,4 @@ alias apply_staging='cd ~/code/infrastructure/staging/us-east-2/demo/instance;AW
 alias apply_production='cd ~/code/infrastructure/production/us-east-2/backend;AWS_PROFILE=tm-production AWS_DEFAULT_REGION=us-east-2 terraform apply'
 
 # Kube tasks
-alias list_pots='AWS_PROFILE=tm-staging kubectl get pods -n'
+alias list_pods='AWS_PROFILE=tm-staging kubectl get pods -n ' # needs demo env (ie, 'keeps-1202')
