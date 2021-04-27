@@ -3,9 +3,10 @@
   email = ray.walters@gmail.com
 [alias]
   aa = add --all --intent-to-add
-  unstage = reset HEAD
   cm      = commit -m
-  rmbranch= delete-branch
-  mnf     = merge --no-ff
+  cp      = cherry-pick
   ls      = branch
   lsgrep  = branch -a --list
+  mnf     = merge --no-ff
+  rmbranch= delete-branch
+  unstage = reset HEAD
