@@ -1,1 +1,5 @@
 gem: --no-document
+---
+:sources:
+- https://rubygems.org/
+- https://rwalters:e03018cf239aeca20c9a6b0c85c62b7a895454e3@rubygems.pkg.github.com/thirtymadison/
