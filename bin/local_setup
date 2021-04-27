@@ -34,37 +34,37 @@ brew tap homebrew/cask-fonts
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 echo "Utilities"
-brew cask install sizeup
-brew cask install iterm2
-brew cask install slack
-brew cask install vlc
-brew cask install docker
+brew install sizeup
+brew install iterm2
+brew install slack
+brew install vlc
+brew install docker
 
 echo "Cloud Drives"
-brew cask install dropbox
-brew cask install box-drive
+brew install dropbox
+brew install box-drive
 
 echo "Organizational Tools"
-brew cask install evernote
+brew install evernote
 mas install 944960179 # AnyDo
-brew cask install alfred
+brew install alfred
 
 echo "Browsers"
 if [ ! -e "/Applications/Google Chrome.app" ]; then
-  brew cask install google-chrome
+  brew install google-chrome
 fi
 if [ ! -e "/Applications/Firefox.app" ]; then
-  brew cask install firefox
+  brew install firefox
 fi
 
 echo "Monospaced fonts"
-brew cask install font-anonymous-pro
-brew cask install font-droidsansmono-nerd-font
+brew install font-anonymous-pro
+brew install font-droidsansmono-nerd-font
 
 echo "Cleanup"
 brew cleanup
 
-brew cask alfred link
+brew alfred link
 
 echo "RCUP"
 chsh -s $(which zsh)
